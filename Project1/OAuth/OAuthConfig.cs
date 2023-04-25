@@ -16,8 +16,8 @@ namespace OAuth
     {
         public static void MicrosoftConfig(OAuthOptions option)
         {
-            option.ClientId = "95c3be68-a14f-49f7-9008-8c49e46d987b";
-            option.ClientSecret = "Ql*n3.6_C]3l82gSz9mB/30tQW[ON2]+";
+            option.ClientId = "YOUR_CLIENT_ID";
+            option.ClientSecret = "YOUR_CLIENT_SECRET";
             option.AuthorizationEndpoint = "https://login.microsoftonline.com/common/oauth2/v2.0/authorize";
             option.TokenEndpoint = "https://login.microsoftonline.com/common/oauth2/v2.0/token";
             option.UserInformationEndpoint = "https://graph.microsoft.com/v1.0/users";
