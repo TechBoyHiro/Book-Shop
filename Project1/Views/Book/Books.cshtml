@@ -1,0 +1,242 @@
+﻿
+@{
+    ViewData["Title"] = "Books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="w-100 h-100" id="books-cards">
+    <div class="container pt-4">
+
+
+
+        <div class="card" style="border:1px gold solid;">
+            <div class="card-header" style="background-color:black;color:gold;">
+                <h3 class="display-4 text-center mt-2">GHADIR</h3>
+                <hr class="w-100 mb-2" style="background-color:gold;">
+            </div>
+            <div class="card-block">
+                <div class="row mainbook-card-slider">
+
+
+                    @foreach (Book item in ViewBag.books)
+                    {
+                        <div class="col-3 mt-3">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="~/images/img3.jpg" alt="pic">
+                                <div class="card-block text-center">
+                                    <h3 class="card-text">@item.Name</h3>
+                                    <p class="text-muted">@item.Description</p>
+                                    <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+
+                    @*<div class="col-3 mt-3">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="~/images/img3.jpg" alt="pic">
+                                <div class="card-block text-center">
+                                    <h3 class="card-text">Book Title</h3>
+                                    <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                    <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-3 mt-3">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="~/images/img1.jpg" alt="pic">
+                                <div class="card-block text-center">
+                                    <h3 class="card-text">Book Title</h3>
+                                    <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                    <a class="btn btn-outline-primary w-100 text-center">More</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-3 mt-3">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="~/images/img2.jpg" alt="pic">
+                                <div class="card-block text-center">
+                                    <h3 class="card-text">Book Title</h3>
+                                    <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                    <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-3 mt-3">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="~/images/img3.jpg" alt="pic">
+                                <div class="card-block text-center">
+                                    <h3 class="card-text">Book Title</h3>
+                                    <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                    <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3 mt-3">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="~/images/img1.jpg" alt="pic">
+                                <div class="card-block text-center">
+                                    <h3 class="card-text">Book Title</h3>
+                                    <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                    <a class="btn btn-outline-primary text-center w-100 d-block">More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3 mt-3">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="~/images/img2.jpg" alt="pic">
+                                <div class="card-block text-center">
+                                    <h3 class="card-text">Book Title</h3>
+                                    <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                    <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-3 mt-3">
+                            <div class="card">
+                                <img class="card-img-top img-fluid" src="~/images/img3.jpg" alt="pic">
+                                <div class="card-block text-center">
+                                    <h3 class="card-text">Book Title</h3>
+                                    <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                    <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                                </div>
+                            </div>
+                        </div>*@
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="card mt-5 mb-5" style="border:1px gold solid;">
+            <div class="card-header" style="background-color:black;color:gold;">
+                <h3 class="display-4 text-center mt-2">FATEMIYEH</h3>
+                <hr class="w-100 mb-2" style="background-color:gold;">
+            </div>
+            <div class="card-block">
+                <div class="row mainbook-card-slider">
+
+
+                    <div class="col-3 mt-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="~/images/img3.jpg" alt="pic">
+                            <div class="card-block text-center">
+                                <h3 class="card-text">Book Title</h3>
+                                <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-3 mt-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="~/images/img1.jpg" alt="pic">
+                            <div class="card-block text-center">
+                                <h3 class="card-text">Book Title</h3>
+                                <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                <a class="btn btn-outline-primary w-100 text-center">More</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-3 mt-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="~/images/img2.jpg" alt="pic">
+                            <div class="card-block text-center">
+                                <h3 class="card-text">Book Title</h3>
+                                <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-3 mt-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="~/images/img3.jpg" alt="pic">
+                            <div class="card-block text-center">
+                                <h3 class="card-text">Book Title</h3>
+                                <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 mt-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="~/images/img1.jpg" alt="pic">
+                            <div class="card-block text-center">
+                                <h3 class="card-text">Book Title</h3>
+                                <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                <a class="btn btn-outline-primary text-center w-100 d-block">More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 mt-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="~/images/img2.jpg" alt="pic">
+                            <div class="card-block text-center">
+                                <h3 class="card-text">Book Title</h3>
+                                <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3 mt-3">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="~/images/img3.jpg" alt="pic">
+                            <div class="card-block text-center">
+                                <h3 class="card-text">Book Title</h3>
+                                <p class="text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus fuga explicabo temporibus deserunt beatae praesentium, consequatur eveniet tempore quibusdam nemo?</p>
+                                <a class="btn btn-outline-primary w-100 text-center d-block">More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.min.js"></script>
+<script src="~/js/slick.js"></script>
+<script type="text/javascript" src="~/js/main.js"></script>
+<script src="~/js/tether.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script>
+    $('#book').addClass("current text-white");
+</script>
+

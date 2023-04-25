@@ -1,0 +1,155 @@
+﻿
+@{
+    ViewData["Title"] = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+
+
+
+<section>
+    <div class="slider carousel" data-ride="carousel" id="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1" class="active"></li>
+            <li data-target="#carousel" data-slide-to="2" class="active"></li>
+        </ol>
+        <div class="carousel-inner">
+
+            <div class="carousel-item image-1 active">
+                <div class="carousel-caption d-none d-sm-block">
+                    <h1>Pic One</h1>
+                </div>
+            </div>
+
+            <div class="carousel-item image-2">
+                <div class="carousel-caption d-none d-sm-block">
+                    <h1>Pic Two</h1>
+                </div>
+            </div>
+
+            <div class="carousel-item image-3">
+                <div class="carousel-caption d-none d-sm-block">
+                    <h1>Pic Three</h1>
+                </div>
+            </div>
+
+        </div>
+        <a href="#carousel" class="carousel-control-prev" data-slide="prev"><span class="carousel-control-prev-icon"></span></a>
+        <a href="#carousel" class="carousel-control-next" data-slide="next"><span class="carousel-control-next-icon"></span></a>
+    </div>
+</section>
+
+
+<section id="book_card">
+    <div class="container">
+        <div class="book-card-slider mt-4">
+
+            <div>
+                <div class="card mx-2" id="blog_card">
+                    <img src="~/images/img3.jpg" alt="" class="card-img-top img-fluid">
+                    <div class="card-block">
+                        <h3 class="text-success">Book Name</h3>
+                        <p class="lead text-muted">Description Here</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card mx-2" id="blog_middle_card">
+                    <img src="~/images/img1.jpg" alt="" class="card-img-top img-fluid">
+                    <div class="card-block">
+                        <h3 class="text-success">Book Name</h3>
+                        <p class="lead text-muted">Description Here</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card mx-2" id="blog_card">
+                    <img src="~/images/img2.jpg" alt="" class="card-img-top img-fluid">
+                    <div class="card-block">
+                        <h3 class="text-success">Book Name</h3>
+                        <p class="lead text-muted">Description Here</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card mx-2" id="blog_middle_card">
+                    <img src="~/images/img3.jpg" alt="" class="card-img-top img-fluid">
+                    <div class="card-block">
+                        <h3 class="text-success">Book Name</h3>
+                        <p class="lead text-muted">Description Here</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card mx-2" id="blog_card">
+                    <img src="~/images/img2.jpg" alt="" class="card-img-top img-fluid">
+                    <div class="card-block">
+                        <h3 class="text-success">Book Name</h3>
+                        <p class="lead text-muted">Description Here</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="card mx-2" id="blog_middle_card">
+                    <img src="~/images/img1.jpg" alt="" class="card-img-top img-fluid">
+                    <div class="card-block">
+                        <h3 class="text-success">Book Name</h3>
+                        <p class="lead text-muted">Description Here</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+<section class="py-3 mt-4" style="background-color:#000000;">
+    <div class="container w-100">
+        <div class="row">
+            <div class="col-md-8 text-white text-center">
+                <h3 class="display-4 m-auto">
+                    Why These Books
+                </h3>
+                <p class="lead">
+                    Description .... Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, unde eligendi. Dicta sed facere suscipit veritatis maiores saepe officia, facilis dolore tenetur dignissimos recusandae tempora sapiente aut quam aliquid. Aspernatur!
+                </p>
+            </div>
+            <div class="col-md-4 m-auto">
+                <img src="~/images/img2.jpg" alt="pic" class="img-fluid rounded-circle" style="border:2px #fff solid;">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.min.js"></script>
+<script src="~/js/slick.js"></script>
+<script type="text/javascript" src="~/js/main.js"></script>
+<script src="~/js/tether.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script>
+    //$('.login-text').text("Logout");
+    $('.login-icon').removeClass("fa-user-slash");
+    $('.login-icon').addClass("fa fa-user");
+    $('#auth').attr("href","Account/logout");
+    $('#home').addClass("current text-white");
+</script>

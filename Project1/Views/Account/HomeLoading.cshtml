@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Loading";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+    <section class="w-100 h-100">
+        <div class="container w-100">
+            <div class="row w-100 h-100">
+                <div class="col text-center">
+                    @while (!User.Identity.IsAuthenticated)
+                    {
+                        <h4 class="display-4 mt-4">Loading <div class="spinner-grow mb-2 text-  danger"></div> <div class="spinner-grow mb-2 text-success"></div> <div class="spinner-grow mb-2 text-primary"></div></h4>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>
+
+   @if(User.Identity.IsAuthenticated)
+   {
+       <script>
+             window.setTimeout(function () {
+        window.location.href = '/Home/index';
+    }, 0);
+       </script>
+   }
+
+
+

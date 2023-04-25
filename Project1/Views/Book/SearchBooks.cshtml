@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "SearchBooks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                @if (ViewBag.searchR == true)
+                {
+                    <h3 class="display-4 mt-3">Search Resault</h3>
+                }
+                else
+                {
+                    <h3 class="display-4 mt-3 text-danger">Book Not Found!</h3>
+                }
+                <hr class="w-75 mt-2 bg-success">
+            </div>
+        </div>
+        <div class="row">
+            @foreach (Book item in Model)
+            {
+                <div class="col-12">
+                    <a href="#">
+                        <div class="card mb-4" style="border:1px black solid;">
+                            <div class="card-block">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="@item.imgpath" class="img-fluid">
+                                    </div>
+                                    <div class="col-8">
+                                        <h3 class="text-left d-inline text-primary">Book Name : </h3>
+                                        <p class="d-inline mb-5">@item.Name</p>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <h3 class="text-left  text-primary  d-inline ">Book Title : </h3>
+                                        <p class="d-inline">@item.Description</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.min.js"></script>
+<script src="~/js/slick.js"></script>
+<script type="text/javascript" src="~/js/main.js"></script>
+<script src="~/js/tether.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+
+<script>
+    $('.card').focus(function () {
+        $(this).css({ "background-color": "#ffff", "color": "rgb(248,250,2)" });
+        //$(this).css("color", "rgb(248,250,2)");
+    });
+</script>
+

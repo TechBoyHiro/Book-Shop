@@ -1,0 +1,107 @@
+﻿@model BookMicrosoftVersion.Infrastructure.AccountInfraStructure.LoginUserNameModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Login Account";
+}
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <environment>
+        <link rel="stylesheet" type="text/css" href="~/css/slick-theme.css" runat="server">
+        <link rel="stylesheet" type="text/css" href="~/css/slick.css" runat="server">
+    </environment>
+    <environment>
+        <link rel="stylesheet" type="text/css" href="~/css/Style.css" />
+    </environment>
+
+
+</head>
+
+
+
+
+<body>
+    <section class="hidden-sm-down" id="login_section" content="width=device-width" style="height:100%;">
+        <div class="container align-items-center justify-content-center d-flex w-50" style="height:100%;">
+            <div class="card w-75 p-3" style="max-width:480px;border-radius:0px;">
+                @*<div class="card-header text-center" style="background-color:black;color:goldenrod;">
+                        <h3 class="display-4">
+                            Sign In
+                        </h3>
+                        <p class="text-white">Use Your Account</p>
+                    </div>*@
+                <div class="card-block">
+                    <form method="post" asp-action="LoginUserName" asp-controller="account">
+                        <img src="~/images/ml.jpg" alt="pic" class="img-fluid text-left" style="max-height:25px;">
+                        <h3 class="text-left mb-2 mt-4">Sign in</h3>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="form-group mt-2">
+                            <input class="form-control" style="border:2px white solid;border-bottom:1px blue solid" name="email" asp-for="Email" id="email" placeholder="someone@example.com" type="text">
+                        </div>
+                        @*<div class="form-group mt-2">
+                                <label for="password">Password</label>
+                                <input class="form-control" name="password" asp-for="Password" id="password" placeholder="Password ... " type="password">
+                            </div>*@
+                        <a href="#">Privacy And Terms</a>
+                        <br />
+                        <p class=" text-muted mt-2">Dont Have Account!<a asp-action="Create" asp-controller="Account"> Create One</a></p>
+                        @*<a asp-action="ForgetPassword" asp-controller="account" >Forget My Password </a>*@
+                        <button href="#" class="btn btn-primary mt-3 pull-right" style="min-width:100px;background-color:#2848f5;border-radius:0px;" type="submit">Next</button>
+                        @*<a class="btn btn-primary w-100 mt-3 d-block" asp-action="OAuthLogin" asp-controller="Account">Log In With Microsoft</a>
+                            <a class="btn btn-secondary w-100 mt-3 d-block" asp-action="OAuthLogin" asp-controller="Account" disabled>Log In With GitHub</a>*@
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="w-100 d-md-none">
+        <div class="card w-100">
+            <div class="card-header text-center" style="background-color:white;">
+                <h3 class="display-4">Sign In</h3>
+                <p class="lead text-muted mb-0 pt-1">Use Your Account</p>
+            </div>
+            <div class="card-block text-white" style="background-color:black;">
+                <form method="post" asp-action="login" asp-controller="account">
+                    <div class="form-group">
+                        <label for="name">Username</label>
+                        <input class="form-control" name="username" id="name" placeholder="Name ... " type="text" asp-route-name="">
+                    </div>
+                    <div class="form-group mt-2">
+                        <label for="password">Password</label>
+                        <input class="form-control" name="password" id="password" placeholder="Password ... " type="password">
+                    </div>
+                    <a href="#">Privacy And Terms</a>
+                    <button href="#" class="btn btn-outline-success d-block mt-3 w-100" type="submit">Sign In</button>
+                    <p class="text-muted mt-2">Dont Have Account !<a class="text-primary" asp-action="create" asp-controller="account"> Create One</a></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/js/jquery.min.js"></script>
+    <script src="~/js/slick.js"></script>
+    <script type="text/javascript" src="~/js/main.js"></script>
+    <script src="~/js/tether.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+</body>

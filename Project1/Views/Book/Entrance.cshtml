@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewData["Title"] = "Entrance";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="w-100">
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="display-4 text-danger text-center m-3">Sorry Permission Denied !</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.min.js"></script>
+<script src="~/js/slick.js"></script>
+<script type="text/javascript" src="~/js/main.js"></script>
+<script src="~/js/tether.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+@if (ViewContext.HttpContext.User.Identity.IsAuthenticated)
+{
+    <script>
+        $('.login-text').text("Logout");
+        $('.login-icon').removeClass("fa-user-slash");
+        $('.login-icon').addClass("fa fa-user");
+        $('#auth').attr("href", "Account/logout");
+    </script>
+}
+
+

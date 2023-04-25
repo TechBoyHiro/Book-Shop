@@ -1,0 +1,69 @@
+﻿.image-1{
+    background:url(../images/img1.jpg);
+    background-size:cover;
+}
+
+.image-2 {
+    background: url(../images/img2.jpg);
+    background-size: cover;
+}
+
+.image-3 {
+    background: url(../images/img3.jpg);
+    background-size: cover;
+}
+
+.carousel-item{
+    height:400px;
+}
+
+#blog_card {
+    min-height: 400px;
+}
+
+#blog_card .card-block {
+    background-color: #000;
+    color: gold;
+}
+
+#blog_middle_card {
+    border-color: gold;
+}   
+
+.blog-card-slider .slick-next {
+    color: red;
+}
+
+#login_section{
+    background:url('../images/img4.jpg');
+    background-size:cover;
+}
+
+.dark-overlay{
+    background-image:url('../images/img2.jpg');
+    background-size:cover;
+    background-attachment:fixed;
+    background-color:rgba(0,0,0,0.7);
+    position:relative;
+}
+
+#books-cards{
+    min-height:fit-content;
+    background-image:url('../images/img4.jpg');
+    background-attachment:fixed;
+    background-color:rgba(0,0,0,0.7);
+    background-size:cover;
+}
+
+#contact-header-img {
+    background-image: url('../images/img2.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.current {
+    font-size: 20px;
+    padding: 4px;
+    color: chartreuse;
+    border-bottom: 1px #0b6af8 solid;
+}

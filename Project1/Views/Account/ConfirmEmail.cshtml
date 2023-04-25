@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "ConfirmEmail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <section class="w-100 h-100">
+        <div class="container w-100">
+            <div class="row w-100 h-100">
+                <div class="col text-center">
+                    @if (ViewBag["Error"] == null)
+                    {
+                        <p class="text-center mt-4 text-success display-4">Thank You For Confirming Your Email</p>
+                    }
+                    else
+                    {
+                        <h3 class="text-danger display-4 mt-4 text-center">Sorry @ViewBag["Error"]</h3>
+                    }
+                </div>
+            </div>
+        </div>
+    </section>

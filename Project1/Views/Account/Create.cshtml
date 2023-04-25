@@ -1,0 +1,178 @@
+﻿@model BookWebApp.Infrastructure.AccountInfraStructure.CreateUserModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<section class="py-5 dark-overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center text-white my-3">
+                <h1 class="display-4">Wellcome</h1>
+                <p class="lead">You Can Find Whatever You Need</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img src="~/images/img3.jpg" alt="pic" class="rounded-circle img-fluid d-block hidden-sm-down" style="max-width:400px;margin-top:-40px;border:2px white solid;">
+            </div>
+            <div class="col-6 text-center text-muted mt-5">
+                <h4>To Register Fill The Form Bellow</h4>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-3"></div>
+            <div class="col-6">
+                    <div class="card mt-4" style="border:2px black solid;">
+                        <div class="card-block">
+                            <form class="form-group" method="post" id="form" asp-action="Create" asp-controller="Account">
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="name">Name :</label>
+                                            @Html.ValidationMessageFor(m => m.name, "", new { @class = "text-danger" })
+                                            @Html.TextBoxFor(m => m.name, new { @class = "form-control input-st", placeholder = "Name ...", style = "border:1px gold solid;", id = "name" })
+
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="lname">Last Name :</label>
+                                            <input class="form-control input-st" placeholder="Last name" name="lastname" id="lname" style="border:1px rgb(241, 209, 26) solid;">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col mt-2">
+                                            <label for="email">E-mail :</label>
+                                            @*<input class="form-control" placeholder="Someone@Example.com" style="border:1px gold solid;">*@
+                                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-st", placeholder = "Someone@Example.com", style = "border:1px gold solid;", id = "email" })
+                                        </div>
+                                    </div>
+                                    <hr class="bg-inverse ">
+                                    <div class="row mt-2">
+                                        <div class="col">
+                                            <label for="uname">User Name :</label>
+                                            @*<input type="text" class="form-control" placeholder="UserName ..." style="border:1px gold solid;" id="uname">*@
+                                            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-st", placeholder = "name...", style = "border:1px gold solid;", id = "name" })
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col">
+                                            <label for="phonenumber">PhoneNumber :</label>
+                                            @*<input type="text" class="form-control" placeholder="UserName ..." style="border:1px gold solid;" id="uname">*@
+                                            @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+                                            @Html.TextBoxFor(m => m.PhoneNumber, new { @class = "form-control input-st", placeholder = "name...", style = "border:1px gold solid;", id = "name" })
+                                        </div>
+                                    </div>
+                                    <div class="row mt-2">
+                                        <div class="col-6">
+                                            <label for="password">Password :</label>
+                                            @*<input type="password" class="form-control" placeholder="Password" id="name"
+                style="border:1px gold solid;">*@
+                                            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                                            @Html.TextBoxFor(m => m.Password, new { @class = "form-control input-st", placeholder = "Password", style = "border:1px gold solid;", id = "password" })
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="lname">Confirm Password :</label>
+                                            <input asp-for="ConfirmPassword" type="password" class="form-control input-st" placeholder="Confirm Password" id="lname"
+                                                   style="border:1px gold solid;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <label class="form-check-label text-warning ml-3">
+                                        @Html.CheckBoxFor(m=>m.SendNotification,new { @class="form-check-input text-success"}) Send Me News
+                                </div>
+                                <div class="form-check mt-3">
+                                    <label class="form-check-label text-warning ml-3">
+                                        <input class="form-check-input" type="checkbox" id="checkbtn">
+                                        Agree To <a class="text-primary"> Terms And Conditions</a>
+                                    </label>
+                                </div>
+                                <button class="btn btn-outline-primary w-100 d-block mt-2" type="submit" id="submit-btn" disabled="true">Submit</button>
+                                <button class="btn btn-warning d-block w-100 mt-2" id="user-btn">Show Entities</button>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Modal -->
+<div id="user-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body text-center text-success">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.min.js"></script>
+<script src="~/js/slick.js"></script>
+<script type="text/javascript" src="~/js/main.js"></script>
+<script src="~/js/tether.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script>
+    $(document).ready(function () {
+
+        $('#checkbtn').on('change', function () {
+            if ($(this).is(':checked')) {
+                $('#submit-btn').prop('disabled', false);
+            }
+            else {
+                $('#submit-btn').prop('disabled', true);
+            }
+        });
+
+        $('#user-btn').click(function () {
+            $.get("/Account/GetUsers", function (data, status) {
+                alert("Data: " + data + "\n Status: " + status);
+                $('.modal-body').add(data);
+            });
+        });
+
+        $('.input-st').focus(function () {
+            $(this).css("background-color", "#F5F984");
+        });
+        $('.input-st').blur(function () {
+            $(this).css("background-color", "#ffffff");
+        });
+    });
+
+</script>
+
+
+

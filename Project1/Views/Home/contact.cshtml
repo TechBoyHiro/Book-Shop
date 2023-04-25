@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewData["Title"] = "contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section id="contact-header-img">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center text-white">
+                <h1 class="display-4 py-5">Contact Us</h1>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 mb-4">
+                <div class="card mt-4">
+                    <div class="card-block text-center" style="background-color:black;border-radius: 12px;border: 2px gold solid;">
+                        <h3 style="color:gold;">GET IN TOUCH</h3>
+                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium cupiditate facilis et nam ipsum quis saepe nisi tempora amet sequi!</p>
+                        <h3 style="color:gold;">ADDRESS</h3>
+                        <p class="text-white">Bg Street , Mashhad , IRAN</p>
+                        <h3 style="color:gold;">E-MAIL</h3>
+                        <p class="text-white"> a.m.sh.playstore@gmail com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-12 mt-4">
+                <div class="card" style="border:2px black solid;">
+                    <div class="card-block text-center pb-2">
+                        <h3>Please Let Us Know What You Think</h3>
+                        <hr class="bg-primary w-75">
+                        <form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="input-group">
+                                        <span class="input-group-addon bg-inverse text-white">Name</span>
+                                        <input type="text" placeholder="Name"
+                                               class="form-control w-100" style="border:1px black solid;">
+                                    </div>
+                                </div>
+                                <div class="col-6 px-0 pr-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon bg-inverse text-white">F-Name</span>
+                                        <input type="text" class="form-control w-100" placeholder="Last Name" style="border:1px black solid;">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="input-group mt-2">
+                                <span class="input-group-addon bg-inverse text-white">E-MAIL</span>
+                                <input type="text" placeholder="Someone@Example.com"
+                                       class="form-control mr-2" style="border:1px black solid;">
+                            </div>
+                            <div class="input-group mt-3 ">
+                                <span class="input-group-addon bg-inverse text-white">Message</span>
+                                <textarea name="" id="" class="form-control w-100" rows="3" placeholder="Max 20 Character" style="border:1px black solid;"></textarea></textarea>
+                            </div>
+                            <button class="btn btn-primary w-100 mt-2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.js"></script>
+<script src="~/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/js/jquery.min.js"></script>
+<script src="~/js/slick.js"></script>
+<script type="text/javascript" src="~/js/main.js"></script>
+<script src="~/js/tether.min.js"></script>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+<script>
+    $('#contact').addClass("current text-white");
+</script>
+
+@if (ViewContext.HttpContext.User.Identity.IsAuthenticated)
+{
+    <script>
+        $('.login-text').text("Logout");
+        $('.login-icon').removeClass("fa-user-slash");
+        $('.login-icon').addClass("fa fa-user");
+        $('#auth').attr("href", "Account/logout");
+    </script>
+}

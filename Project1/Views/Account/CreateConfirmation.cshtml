@@ -1,0 +1,41 @@
+﻿@model string
+@{
+    ViewData["Title"] = "CreateConfirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="py-5 dark-overlay">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center text-white my-3">
+                <h1 class="display-4">Wellcome</h1>
+                <p class="lead">You Can Find Whatever You Need</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img src="~/images/img3.jpg" alt="pic" class="rounded-circle img-fluid d-block hidden-sm-down" style="max-width:400px;margin-top:-40px;border:2px white solid;">
+            </div>
+            <div class="col-6 text-center text-muted mt-5">
+                <h4>To Register Fill The Form Bellow</h4>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-3"></div>
+            <div class="col-6">
+                <h5 class="display-4 mt-3 text-center text-success">Registration Was Successfully Done</h5>
+                <h4 class="text-center"> Check @Model For Confirmation</h4>
+
+            </div>
+            <div class="col-3"></div>
+        </div>
+    </div>
+</section>
